@@ -1,4 +1,7 @@
 // A CircularPool can
+//what does this do and why do we need this**
+//go over all**
+//what is the T generic type and what is the generic type and what does it say**
 export interface CircularPool<T> {
   // get the next available item in the pool
   nextItem: () => T;
@@ -22,6 +25,7 @@ export const makeCircularPool = <T>(
 
   const nextItem = (): T => {
     // increment index and wrap if needed
+    // what does this mean**
     index = (index + 1) % size;
     // return the item stored at index
     return pool[index];
@@ -34,6 +38,7 @@ export const makeCircularPool = <T>(
 
   // don't expose size, pool, index ("private")
   // do expose nextItem() and forEach() ("public")
+  // I thought this only worked for classes what does closures work for usually**
   return {
     nextItem,
     forEach,

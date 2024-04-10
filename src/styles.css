@@ -3,6 +3,7 @@ html {
   text-align: center;
 }
 
+/*this makes the whole keyboard (this was defined in index.HTML for everything in the keyboard (all it's keys))***/
 #keyboard {
   display: flex;
   gap: 1px;
@@ -10,12 +11,17 @@ html {
   align-items: flex-start;
 }
 
+/*for each key we make a solid border and make it a certain width and height (we defined key class for each
+key in keyboard.TS***/
 .key {
   border: 1px solid black;
   width: 20px;
   height: 100px;
 }
 
+/*when we add the classname black onto some keys in keyboard.TS we make the key black and we set the width and the height
+to go to the top of the keyboard and the margins are for***/
+/*we make the z-index 5 so we can show these black keys ontop of the white ones so they overlap like a keyboard***/
 .black {
   background-color: black;
   width: 12px;
@@ -25,6 +31,9 @@ html {
   z-index: 5;
 }
 
+/*we add this playing class in main only when we***/
+/*when a we press a key to play a sound only change the key to this color but when it's done playing change the color
+back to white or black based on the key (how)***/
 .playing {
   background-color: aquamarine;
 }
