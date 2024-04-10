@@ -332,6 +332,12 @@ beginButton.addEventListener('click', async () => {
  * objects and use them over time (like an array that stores 8 items and it tracks the index for us and we get the next available
  * synth as we keep playing then when we are done we stop using the synth and the arrays clears)** (slide 8)**
  * 
+ * when we want to play the note and we go to the next item function wouldnt the first note get skipped in the array then (the 0th
+ * index)** (slide 8)**
+ * 
+ * for slide 8 last 2 bullets does this happen automatically or do we have something like a function made to handle
+ * these two cases** (same for the rest of the bullets)**
+ * 
  * we say synthpool give us the next item then save it so we can turn it off later then trigger an attack with the frequency, now, and
  * velocity which actuall plays the note for us and when we let go of the key we say synthbtnote to turn it off
  * 
