@@ -1,0 +1,30 @@
+html {
+  padding: 40px;
+  text-align: center;
+}
+
+#keyboard {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.key {
+  border: 1px solid black;
+  width: 20px;
+  height: 100px;
+}
+
+.black {
+  background-color: black;
+  width: 12px;
+  height: 60px;
+  margin-left: -6.5px;
+  margin-right: -6.5px;
+  z-index: 5;
+}
+
+.playing {
+  background-color: aquamarine;
+}
