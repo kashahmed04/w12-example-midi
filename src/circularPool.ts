@@ -1,7 +1,5 @@
 // A CircularPool can
-//what does this do and why do we need this**
-//go over all**
-//what is the T generic type and what is the generic type and what does it say**
+//this allows us to play each audio without waiting for the audio to stop to play the next one
 export interface CircularPool<T> {
   // get the next available item in the pool
   nextItem: () => T;
@@ -19,6 +17,8 @@ export const makeCircularPool = <T>(
   let index = 0;
 
   // build the items and store them in the pool
+  // the item at index i of this pool is whatever the itembuilder returns and as long as we return a synthpool
+  // we will have tonesynths in our pool
   for (let i = 0; i < size; i++) {
     pool[i] = itemBuilder();
   }
@@ -38,7 +38,7 @@ export const makeCircularPool = <T>(
 
   // don't expose size, pool, index ("private")
   // do expose nextItem() and forEach() ("public")
-  // I thought this only worked for classes what does closures work for usually**
+  // (this is a method like a class) can be used anywhere though 
   return {
     nextItem,
     forEach,
