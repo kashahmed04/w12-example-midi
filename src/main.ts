@@ -8,14 +8,14 @@ import * as Tone from 'tone';
 // when we are allowed to use MIDI 
 // is this when midi loads in for us or when is this (yes it when it loads for us)
 // why did we have to wait for midi to load whereas in other API's we did not have to wait for a load (we did have some sort of load
-// so there will be a resolve or reject and it varies from resolved to reject)
+// so there will be a resolve or reject and it varies from resolved to reject for different API's)
 const onMIDISuccess = (midi: MIDIAccess) => {
   console.log('MIDI ready!');
 
   // show which devices are connected
   // midiaccess returns the inputs and outputs and the sysexenabled (we don't have to worry about this)
   listInputsAndOutputs(midi);
-  //just tells us whats there and the foreach below is what we actually do for the connection 
+  //this just tells us whats there and the foreach below is what we actually do for the connection 
 
   // start listening for MIDIMessages on all devices
   midi.inputs.forEach((input: MIDIInput) => {
